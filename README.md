@@ -1,4 +1,5 @@
-# Planet Nine Evolution Hypothesis
+![Planet Nine Evolution Diagram](figures/planet9_diagram.png)
+## Planet Nine Evolution Hypothesis
 
 A physics-based hypothesis exploring how an additional ice-giant–mass planet may
 have influenced the early dynamical evolution of the outer solar system.
