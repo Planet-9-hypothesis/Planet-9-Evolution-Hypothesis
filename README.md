@@ -119,6 +119,18 @@ known physical principles.
 
 ---
 
+## Why This Matters
+
+Understanding the early evolution of the solar system helps explain:
+- the structure of the Kuiper Belt
+- long-period trans-Neptunian objects
+- planetary migration
+- how planetary systems evolve in general
+
+Similar processes are observed in exoplanetary systems.
+
+---
+
 ![Planet Nine Evolution Diagram](figures/planetx_image.png)
 
 ---
