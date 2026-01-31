@@ -6,6 +6,16 @@ have influenced the early dynamical evolution of the outer solar system.
 
 ---
 
+## What This Hypothesis Does Not Claim
+
+- It does not claim Planet Nine has been discovered
+- It does not claim proof of existence
+- It does not replace observational studies
+
+This work is a conceptual and educational exploration based on known physics.
+
+---
+
 ## Overview
 
 The Planet Nine Evolution Hypothesis proposes that an additional ice-giant–mass
@@ -110,6 +120,22 @@ known physical principles.
 ---
 
 ![Planet Nine Evolution Diagram](figures/planetx_image.png)
+
+---
+
+## Simple Explanation
+
+In the early solar system, planets were closer together than they are today.
+During this chaotic time, gravitational interactions between the giant planets
+may have scattered an additional ice-giant–mass planet outward.
+
+This planet did not immediately escape the Sun’s gravity. Instead, it followed
+a long, stretched orbit far beyond Neptune. While moving through the outer solar
+system, its gravity slightly influenced Neptune’s orbit before the system
+stabilized.
+
+This hypothesis explores how such a process could naturally occur using known
+laws of physics.
 
 ---
 
