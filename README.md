@@ -48,8 +48,9 @@ bound orbits are commonly observed in numerical scattering simulations.
 A visual HTML simulation to help understand the Planet Nine Evolution Hypothesis.
 
 👉 Open simulation:  
-[Click here to view](simulation.html)
+[Click here to see html code](simulation.html)
 
+Run the HTML5 code and you will get the simulation 
 ---
 ## Influence on Neptune
 
