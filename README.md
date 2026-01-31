@@ -51,7 +51,9 @@ A visual HTML simulation to help understand the Planet Nine Evolution Hypothesis
 [Click here to see html code](simulation.html)
 
 Run the HTML5 code and you will get the simulation 
+
 ---
+
 ## Influence on Neptune
 
 While moving through the outer solar system, Planet Nine continued to interact
