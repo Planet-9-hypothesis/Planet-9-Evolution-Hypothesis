@@ -109,4 +109,8 @@ known physical principles.
 
 ---
 
+![Planet Nine Evolution Diagram](figures/planetx_image.png)
+
+---
+
 > Science begins with curiosity.
