@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Planet Nine Evolution</title>
+
+<style>
+  body {
+    margin: 0;
+    background: #02030a;
+    color: #e0e6ff;
+    font-family: Arial;
+    text-align: center;
+  }
+
+  canvas {
+    width: 95vw;
+    height: 95vw;
+    max-width: 800px;
+    max-height: 800px;
+    background: black;
+    border: 1px solid #222;
+    margin-top: 10px;
+  }
+
+  .info {
+    max-width: 90%;
+    margin: 10px auto;
+    font-size: 14px;
+    color: #bfc9ff;
+    line-height: 1.6;
+  }
+</style>
+</head>
+
+<body>
+
+<h2>Planet Nine Evolution — Interactive Visualization</h2>
+
+<canvas id="space"></canvas>
+
+<div class="info">
+  Blue: Neptune • Red: Planet Nine • Purple: Kuiper Belt<br>
+  Conceptual visualization for understanding orbital structure.
+</div>
+
+<script>
+const canvas = document.getElementById("space");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+  const size = Math.min(window.innerWidth, window.innerHeight) * 0.95;
+  canvas.width = size;
+  canvas.height = size;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+let cx, cy;
+
+let angleN = 0;
+let angleP = 0;
+
+let trailN = [];
+let trailP = [];
+
+function draw() {
+  cx = canvas.width / 2;
+  cy = canvas.height / 2;
+
+  ctx.fillStyle = "rgba(0,0,0,0.25)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Sun
+  ctx.beginPath();
+  ctx.arc(cx, cy, 7, 0, Math.PI * 2);
+  ctx.fillStyle = "yellow";
+  ctx.fill();
+
+  // Kuiper Belt
+  ctx.beginPath();
+  ctx.arc(cx, cy, canvas.width * 0.38, 0, Math.PI * 2);
+  ctx.strokeStyle = "purple";
+  ctx.setLineDash([2, 6]);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Neptune orbit
+  ctx.beginPath();
+  ctx.arc(cx, cy, canvas.width * 0.22, 0, Math.PI * 2);
+  ctx.strokeStyle = "#2e8bff";
+  ctx.stroke();
+
+  // Planet Nine orbit
+  ctx.beginPath();
+  ctx.ellipse(
+    cx,
+    cy,
+    canvas.width * 0.45,
+    canvas.width * 0.15,
+    0,
+    0,
+    Math.PI * 2
+  );
+  ctx.strokeStyle = "red";
+  ctx.stroke();
+
+  let nx = cx + canvas.width * 0.22 * Math.cos(angleN);
+  let ny = cy + canvas.width * 0.22 * Math.sin(angleN);
+
+  let px = cx + canvas.width * 0.45 * Math.cos(angleP);
+  let py = cy + canvas.width * 0.15 * Math.sin(angleP);
+
+  trailN.push({x:nx, y:ny});
+  trailP.push({x:px, y:py});
+
+  if (trailN.length > 200) trailN.shift();
+  if (trailP.length > 500) trailP.shift();
+
+  ctx.fillStyle = "#2e8bff";
+  trailN.forEach(p => ctx.fillRect(p.x, p.y, 1.5, 1.5));
+
+  ctx.fillStyle = "red";
+  trailP.forEach(p => ctx.fillRect(p.x, p.y, 1.5, 1.5));
+
+  ctx.beginPath();
+  ctx.arc(nx, ny, 4, 0, Math.PI * 2);
+  ctx.fillStyle = "#2e8bff";
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(px, py, 4, 0, Math.PI * 2);
+  ctx.fillStyle = "red";
+  ctx.fill();
+
+  angleN += 0.01;
+  angleP += 0.002;
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+</script>
+
+</body>
+</html>
